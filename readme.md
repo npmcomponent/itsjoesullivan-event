@@ -6,12 +6,14 @@ Basic events, for when you want to do _.extend(obj,Backbone.Events) but don't ne
 
 ###Standalone:
 
+```javascript
 	var events = new Events();
 
 	events.on('knock', function() { console.log('who\'s there?'); });
 
 	events.trigger('knock');
 	// who's there?
+```
 
 ###Inheritance:
 
