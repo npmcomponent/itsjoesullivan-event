@@ -1,6 +1,6 @@
 #Event
 
-Basic events, for when you want to do _.extend(obj,Backbone.Events) but don't need Backbone.
+Basic events, for when you want to do _.extend(obj, Backbone.Events ) but don't need Backbone. Slightly different API and less functionality than Backbone, btw!
 
 ##Usage
 
