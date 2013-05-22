@@ -123,7 +123,7 @@ describe('Events', function() {
 
 		describe('inheritance', function() {
 
-			it('works smoothly', function() {
+			it('works smoothly the really normal way', function() {
 
 				var Obj = function() {};
 				Obj.prototype = new Events();
@@ -139,6 +139,23 @@ describe('Events', function() {
 				obj.trigger('yo');
 
 				expect(response).equal(true);
+
+			});
+
+			it('works in creative ways', function() {
+
+				var ready = false;
+
+				var Obj = function() {
+					this.on('ready', function() {
+						ready = true;
+					});
+				};
+				Obj.prototype = new Events();
+
+				var obj = new Obj();
+				obj.trigger('ready');
+				expect(ready).equal(true);
 
 			});
 
