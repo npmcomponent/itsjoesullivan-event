@@ -142,7 +142,7 @@ describe('Events', function() {
 
 			});
 
-			it('works in creative ways', function() {
+			it('works when used in the constructor', function() {
 
 				var ready = false;
 
@@ -156,6 +156,28 @@ describe('Events', function() {
 				var obj = new Obj();
 				obj.trigger('ready');
 				expect(ready).equal(true);
+
+			});
+
+			it('works w inheritance', function() {
+
+				var inherits = function(subj,obj) {
+					for(var i in obj) {
+						if(obj.hasOwnProperty(i)) subj[i] = obj[i];
+					}
+				};
+
+				var obj = {};
+
+				inherits(obj,new Events());
+
+				var a = false;
+
+				obj.on('switch', function() { a = true; });
+
+				obj.trigger('switch');
+
+				expect(a).equal(true);
 
 			});
 

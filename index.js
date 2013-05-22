@@ -1,8 +1,8 @@
-var _Events = function() {};
+exports = function() {};
 
 /** Add a listener to an event designated _name_
 */
-_Events.prototype.on = function(name,fn) {
+exports.prototype.on = function(name,fn) {
 
 	//Lazy instanciation of events object
 	var events = this.events = this.events || {};
@@ -20,7 +20,7 @@ _Events.prototype.on = function(name,fn) {
 
 /** Trigger event
 */
-_Events.prototype.trigger = function(name, arg1, arg2 /** ... */) {
+exports.prototype.trigger = function(name, arg1, arg2 /** ... */) {
 
 	//Only if events + this event exist...
   if(!this.events || !this.events[name]) return this;
@@ -46,8 +46,5 @@ _Events.prototype.trigger = function(name, arg1, arg2 /** ... */) {
 
 };
 
-var Events = function() {
-	return new _Events();
-};
+module.exports = exports;
 
-module.exports = Events;
