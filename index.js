@@ -1,4 +1,4 @@
-exports = function() {};
+module.exports =  exports = function() {};
 
 /** Add a listener to an event designated _name_
 */
@@ -30,12 +30,13 @@ exports.prototype.trigger = function(name, arg1, arg2 /** ... */) {
     //All arguments after the name should be passed to the function
   	args = Array.prototype.slice.call(arguments,1);
 
+  //So we can efficiently apply below
   function triggerFunction(fn) {
   	fn.apply(this,args);
   };
 
   if('forEach' in listeners) {
-  	listeners.forEach(triggerFunction.bind(this)); //TODO bind necessary?
+  	listeners.forEach(triggerFunction.bind(this));
   } else {
   	for(var i in listeners) {
   	  if(listeners.hasOwnProperty(i)) triggerFunction(fn);

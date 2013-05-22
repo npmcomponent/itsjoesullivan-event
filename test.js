@@ -151,25 +151,27 @@ describe('Events', function() {
 						ready = true;
 					});
 				};
+
+
 				Obj.prototype = new Events();
 
 				var obj = new Obj();
 				obj.trigger('ready');
-				expect(ready).equal(true);
+			 expect(ready).equal(true);
 
 			});
 
 			it('works w inheritance', function() {
 
-				var inherits = function(subj,obj) {
+				var extend = function(subj,obj) {
 					for(var i in obj) {
-						if(obj.hasOwnProperty(i)) subj[i] = obj[i];
+						subj[i] = obj[i];
 					}
 				};
 
 				var obj = {};
 
-				inherits(obj,new Events());
+				extend(obj,new Events());
 
 				var a = false;
 
