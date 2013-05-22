@@ -1,0 +1,8 @@
+{
+   "name": "event",
+   "repo": "itsjoesullivan/event",
+   "description": "Backbone-style events outside of the DOM",
+   "keywords": ["event"],
+   "version": "1.0.0",
+   "scripts": ["index.js"]
+}
