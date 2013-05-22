@@ -16,19 +16,21 @@ Basic events, for when you want to do _.extend(obj,Backbone.Events) but don't ne
 ###Inheritance:
 
 ####Traditional
+
+```javascript
 	var Person = function() {
 		this.on('wakeUp',this.brushTeeth);
 	};
-
 	Person.prototype = new Events();
-
 	...
+```
 
 ####_.extend()
 
+```javascript
 	var me = {};
-
 	_.extend(me, new Events() );
+```
 
 
 ##API
