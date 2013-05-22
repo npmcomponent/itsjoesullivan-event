@@ -1,8 +1,13 @@
-module.exports =  exports = function() {};
+module.exports = function() {};
 
-/** Add a listener to an event designated _name_
-*/
-exports.prototype.on = function(name,fn) {
+/** 
+ * Add a listener by event name
+ * @param {String} name
+ * @param {Function} fn
+ * @return {Event} instance
+ * @api public
+ */
+module.exports.prototype.on = function(name,fn) {
 
 	//Lazy instanciation of events object
 	var events = this.events = this.events || {};
@@ -18,9 +23,14 @@ exports.prototype.on = function(name,fn) {
 };
 
 
-/** Trigger event
-*/
-exports.prototype.trigger = function(name, arg1, arg2 /** ... */) {
+/** 
+ * Trigger an event by name, passing arguments
+ * 
+ * @param {String} name
+ * @return {Event} instance
+ * @api public
+ */
+module.exports.prototype.trigger = function(name, arg1, arg2 /** ... */) {
 
 	//Only if events + this event exist...
   if(!this.events || !this.events[name]) return this;
@@ -46,6 +56,3 @@ exports.prototype.trigger = function(name, arg1, arg2 /** ... */) {
   return this;
 
 };
-
-module.exports = exports;
-
