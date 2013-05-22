@@ -24,7 +24,6 @@ Basic events, for when you want to do _.extend(obj,Backbone.Events) but don't ne
 		this.on('wakeUp',this.brushTeeth);
 	};
 	Person.prototype = new Events();
-	...
 ```
 
 ####_.extend()
