@@ -161,7 +161,7 @@ describe('Events', function() {
 
 			});
 
-			it('works w inheritance', function() {
+			it('works w extend-style inheritance', function() {
 
 				var extend = function(subj,obj) {
 					for(var i in obj) {
@@ -182,6 +182,24 @@ describe('Events', function() {
 				expect(a).equal(true);
 
 			});
+
+			
+
+		});
+
+		it('applies arguments', function() {
+
+			var a = false, b = false;
+
+			events.on('hello', function(arg1,arg2) {
+				a = arg1;
+				b = arg2;
+			});
+
+			events.trigger('hello','a','b');
+
+			expect(a).equal('a');
+			expect(b).equal('b');
 
 		});
 
