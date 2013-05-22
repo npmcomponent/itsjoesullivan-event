@@ -21,7 +21,7 @@ Basic events, for when you want to do _.extend(obj, Backbone.Events ) but don't 
 
 ```javascript
 	var Person = function() {
-		this.on('wakeUp',this.brushTeeth); // 'this' will be Person
+		this.on('wakeUp',this.brushTeeth); // 'this' will be Person instance
 		this.on('wakeUp',this.brushTeeth.bind(Ralph)); // 'this' will be Ralph
 	};
 	Person.prototype = new Events();
