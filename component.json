@@ -1,8 +1,8 @@
 {
    "name": "event",
    "repo": "itsjoesullivan/event",
-   "description": "Backbone-style events outside of the DOM",
-   "keywords": ["event"],
+   "description": "Minimal events: 'on', 'trigger'",
+   "keywords": ["event", "trigger"],
    "version": "1.0.0",
    "scripts": ["index.js"]
 }
