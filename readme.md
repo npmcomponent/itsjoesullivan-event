@@ -1,3 +1,4 @@
+*This repository is a mirror of the [component](http://component.io) module [itsjoesullivan/event](http://github.com/itsjoesullivan/event). It has been modified to work with NPM+Browserify. You can install it using the command `npm install npmcomponent/itsjoesullivan-event`. Please do not open issues or send pull requests against this repo. If you have issues with this repo, report it to [npmcomponent](https://github.com/airportyh/npmcomponent).*
 #Event
 
 Basic events, for when you want to do _.extend(obj, Backbone.Events ) but don't need Backbone. Slightly different API and less functionality than Backbone, btw!

@@ -1,0 +1,10 @@
+{
+  "name": "itsjoesullivan-event",
+  "description": "Minimal events: 'on', 'trigger'",
+  "version": "1.0.0",
+  "keywords": [
+    "event",
+    "trigger"
+  ],
+  "dependencies": {}
+}
